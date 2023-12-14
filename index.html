@@ -18,42 +18,25 @@
   </head>
   <body>
     <header>
-      <div class="d-flex bg-gradient">
-        <div class="d-flex flex-grow-1">
-          <nav class="courseTitle">
-            <button class="navbar-brand border-0">
-              <img src="assets/img/logo.png" alt="logo" />
-            </button>
-          </nav>
-          <div class="flex-grow-1">
-            <div class="ReactTitle ps-3 d-flex align-items-center">
-              <img src="assets/img/logo-javascript@2x.png" alt="logo" />
-              <h3 class="mb-0">JS Basic Apps</h3>
-            </div>
-            <div class="d-flex ps-3 align-items-center">
-              <div class="flex-grow-1">
-                <h4>Rock Paper Scissor</h4>
-                <p class="pb-0 mb-3 text-start">
-                  Purpose: Play "Rock Paper Scissor" game with your computer.
-                </p>
-                <p class="pb-0 mt-0 text-start"><a href="https://github.com/brs-studio/js-basics/tree/main/rock-paper-scissor" target="_blank" >Git Repository</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div>
+        <h1>Rock-Paper-Scissor</h1>
       </div>
     </header>
 
     <main role="main" class="container pt-5">
       <div class="form-group" >
-        <div class="form-item">
+        <div class="form-item input-container">
           <input
+          name="input"
             type="text"
-            placeholder="player name"
+            placeholder="player Name"
             id="playerOne"
             autocomplete="off"
             class="form-control form-control-lg"
           />
+          <label class="label" for="input"></label>
+          <div class="topline"></div>
+          <div class="underline"></div>
         </div>
       </div>
 
@@ -110,8 +93,7 @@
     </main>
   
     <footer class="footer footer-dark">
-      <div class="d-flex justify-content-between px-5">
-        <div>ALL RIGHTS RESERVED BRS STUDIO, INDIA</div>
+      <div class="d-flex justify-content-center px-5">
         <div>
           <button
             onclick="setTheme('#3cc89e')"
@@ -125,9 +107,6 @@
             onclick="setTheme('#FEAD06')"
             class="theme-switch theme-switch-yellow_sea"
           ></button>
-        </div>
-        <div>
-          <img src="assets/img/footer-logo.png" alt="logo" />
         </div>
       </div>
     </footer>

@@ -15,51 +15,114 @@ body {
     margin: 0;
     padding: 0;
 }
+.input-container {
+    position: relative;
+  }
+  
+  .input {
+    padding: 10px;
+    height: 40px;
+    border: 2px solid #0B2447;
+    border-top: none;
+    border-bottom: none;
+    font-size: 16px;
+    background: transparent;
+    outline: none;
+    box-shadow: 7px 7px 0px 0px #0B2447;
+    transition: all 0.5s;
+  }
+  
+  .input:focus {
+    box-shadow: none;
+    transition: all 0.5s;
+  }
+  
+  .label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color:var(--primary-color);
+    transition: all 0.5s;
+    transform: scale(0);
+    z-index: -1;
+  }
+  
+  .input-container .topline {
+    position: absolute;
+    content: "";
+    background-color:var(--primary-color);
+    width: 0%;
+    height: 2px;
+    right: 0;
+    top: 0;
+    transition: all 0.5s;
+  }
+  
+  .input-container input[type="text"]:focus ~ .topline {
+    width: 35%;
+    transition: all 0.5s;
+  }
+  
+  .input-container .underline {
+    position: absolute;
+    content: "";
+    background-color: #1d6ad5;
+    width: 0%;
+    height: 2px;
+    right: 0;
+    bottom: 0;
+    transition: all 0.5s;
+  }
+  
+  .input-container input[type="text"]:focus ~ .underline {
+    width: 100%;
+    transition: all 0.5s;
+  }
+  
+  .input-container input[type="text"]:focus ~ .label {
+    top: -10px;
+    transform: scale(1);
+    transition: all 0.5s;
+  }
 
 h1 {
     color: var(--primary-color);
+    text-align: center;
+    margin-top: 20px;
 }
 
 p {
     text-align: center;
 }
 
-.btn, .btn:hover {
-    color: #fff;
-    
+.btn {
+    width: 130px;
+    height: 40px;
+    font-size: 1.1em;
     cursor: pointer;
+    background-color: #171717;
+    color: #fff;
+    border: none;
     border-radius: 5px;
-    
-    padding: 5px 12px;
-}
+    transition: all .4s;
+   }
+   
+   .btn:hover {
+    border-radius: 5px;
+    transform: translateY(-10px);
+    box-shadow: 0 7px 0 -2px #f85959,
+     0 15px 0 -4px #39a2db,
+     0 16px 10px -3px #39a2db;
+   }
+   
+   .btn:active {
+    transition: all 0.2s;
+    transform: translateY(-5px);
+    box-shadow: 0 2px 0 -2px #f85959,
+     0 8px 0 -4px #39a2db,
+     0 12px 10px -3px #39a2db;
+   }
 
-.currency {
-    padding: 40px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.currency select {
-    padding: 10px 20px 10px 10px;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    border: 1px solid #dedede;
-    font-size: 16px;
-    background: transparent;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
-    background-position: right 10px top 50%, 0, 0;
-    background-size: 12px auto, 100%;
-    background-repeat: no-repeat;
-}
-
-.currency input {
-    border: 0;
-    background: transparent;
-    font-size: 30px;
-    text-align: right;
-}
 
 .swap-rate-container {
     display: flex;
